@@ -6,7 +6,7 @@ $form_border-color-success: green !default;
 $form_border-width: 2px !default;
 $form_border-radius: 4px !default;
 $form_border-style: solid !default;
-$form_padding: 4px;
+$form_padding: 4px !default;
 
 @mixin form($border-color:$form_border-color, $border-width: $form_border-width, $border-radius:$form_border-radius, $border-style:$form_border-style, $padding:$form_padding) {
   border-color: $border-color;
