@@ -1,0 +1,123 @@
+@import "_variables";
+// @import "_reset";
+@import "_thumb";
+@import "_grid";
+@import "_form";
+
+h1 {
+  font-size: 32px;
+}
+
+h2 {
+  font-size: 26px;
+}
+
+h3 {
+  font-size: 21px;
+}
+
+h4 {
+  font-size: 18px;
+}
+
+h5 {
+  font-size: 15px;
+}
+
+h6 {
+  font-size: 12px;
+}
+
+h1 > small, h2 > small , h3 > small , h4 > small , h5 > small, h6 > small {
+  font-size: calc(100% / 1.2);
+  color: darkgrey;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: bold;
+}
+
+div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, form, p, blockquote, th, td {
+  margin-top: 1em;
+  margin-bottom: 1em;
+}
+
+mark {
+  color:black;
+  background: yellow;
+}
+
+del {
+  text-decoration: line-through;
+}
+
+ins, u {
+  text-decoration: underline;
+}
+
+strong {
+  font-weight: bold;
+}
+
+em {
+  font-style: italic;
+}
+
+abbr {
+  text-decoration: dotted underline;
+}
+
+.align-left {
+	text-align: left;
+}
+
+.align-right {
+  text-align: right;
+}
+
+.align-center {
+  text-align: center;
+}
+
+.align-justify {
+  text-align: justify;
+}
+
+.uppercase {
+  text-transform: uppercase;
+}
+
+.lowercase {
+  text-transform: lowercase;
+}
+
+.capitalize {
+  text-transform: capitalize;
+}
+
+ul {
+  list-style-type: disc;
+  list-style-position: inside;
+}
+
+ul ul {
+  list-style-type: circle;
+  margin-left: 1em;
+}
+
+ul ul ul {
+  list-style-type: square;
+}
+
+ul.square {
+  list-style-type: square;
+}
+
+ul.none {
+  list-style-type: none;
+}
+
+li {
+  display: list-item;
+  text-align: match-parent;
+}

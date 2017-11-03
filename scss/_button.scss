@@ -1,0 +1,43 @@
+$button_border-radius: 4px !default;
+$button_text-align: center !default;
+$button_text-decoration: none !default;
+$button_background-color: royalblue !default;
+$button_color: white !default;
+
+@mixin button_struct($border-radius:$button_border-radius) {
+  border-radius: $border-radius;
+}
+
+@mixin button_text($text-align:$button_text-align, $text-decoration:$button_text-decoration) {
+  text-align: $text-align;
+  text-decoration: $text-decoration;
+}
+
+@mixin button_style($background-color:$button_background-color, $color:$button_color) {
+  background-color: $background-color;
+  color: $color;
+}
+
+@mixin button($background-color:$button_background-color, $color:$button_color, $border-radius:$button_border-radius, $text-align:$button_text-align, $text-decoration:$button_text-decoration) {
+  @include button_struct($border-radius);
+  @include button_text($text-align, $text-decoration);
+  @include button_style($background-color, $color);
+  display: inline-block;
+  padding: 8px;
+}
+
+.btn {
+  @include button();
+}
+
+.btn-red {
+  @include button(red);
+}
+
+.btn-green {
+  @include button(green);
+}
+
+.btn-yellow {
+  @include button(yellow, black);
+}

@@ -1,0 +1,30 @@
+@import "_button";
+$thumb_box-width: 320px !default;
+$thumb_button-color: royalblue !default;
+$thumb_button-text-color: white !default;
+
+
+
+@mixin thumb($box-width:$thumb_box-width, $button-color:$thumb_button-color, $button-text-color:$thumb_button-text-color) {
+  margin: 8px;
+  width: $box-width;
+  padding: 8px;
+  border: 2px solid grey;
+  box-sizing: border-box;
+  img {
+    max-width: 100%;
+  }
+  h3 {
+    font-size: 16px;
+    font-weight: bold;
+    margin: 8px;
+    margin-left: 0px;
+  }
+  p>a {
+    @include button($button-color, $button-text-color);
+  }
+}
+
+.thumb {
+  @include thumb();
+}

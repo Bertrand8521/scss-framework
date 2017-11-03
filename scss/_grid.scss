@@ -1,0 +1,33 @@
+$grid_cols:12 !default;
+
+@mixin row() {
+  font-size: 0;
+}
+
+@mixin col($col, $sum, $padding: 8px, $align: top) {
+  width: percentage($col/$sum);
+  font-size: 16px;
+  display: inline-block;
+  vertical-align: $align;
+  box-sizing: border-box;
+  padding-left: $padding;
+  padding-right: $padding;
+}
+
+.row {
+  @include row();
+}
+
+$used_ratios: ();
+@for $i from 1 through $grid_cols {
+  @for $j from 1 through $i {
+    $ratio: ($j/$i);
+    @if not index($used_ratios, $ratio) {
+      .col-#{$j}-#{$i} {
+        @include col($j, $i);
+      }
+      $used_ratios: append($used_ratios, $ratio, comma);
+    }
+  }
+}
+
